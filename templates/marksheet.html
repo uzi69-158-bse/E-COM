@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+    {%block content%}
+        <div class="row">
+            <div class="col-12">
+                <form method= "post">
+                    {%if error%}
+                    <div class = "alert alert-danger" role  "alert">
+                    </div>
+                    {% endif %}
+                    {%csrf_token%}
+                    <label>subject1</label>
+                    <input type = 'text' name = "subject1" class = "form-control">
+                    <label>subject2</label>
+                    <input type = 'text' name = "subject2" class = "form-control">
+                    <label>subject3</label>
+                    <input type = 'text' name = "subject3" class = "form-control">
+                    <label>subject4</label>
+                    <input type = 'text' name = "subject4" class = "form-control">   
+                    <label>subject5</label>
+                    <input type = 'text' name = "subject5" class = "form-control"> 
+                    <button type="submit">marksheet</button><br/>
+                    
+                    <label>total</label>
+                    
+                    <input type='text' value= "{{total}}" class='form-control'/>
+
+                    <label>percentage</label>
+
+                    <input type='text' value= "{{percentage}}" class='form-control'/>
+
+                    <label>division</label>
+                </form> 
+            </div> 
+        </div> 
+
+
+
+
+
+    {% endblock  %}

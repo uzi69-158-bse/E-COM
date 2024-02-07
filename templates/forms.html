@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+    {% block content %}
+
+        <div class="row">
+            <div class= "col-12">
+                <form method='post' action = "{% url "submitform" %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                     <div>
+                        <label for=''>value1</label>
+                        <input type='text' name="num1" value= "{{n1}}" class = "form-control"/>
+                    </div>    
+                    <div>
+                        <label for=''>value2</label>
+                        <input type='text' name="num2" value= "{{n2}}" class = "form-control"/>
+                    </div>  
+                    <div class= "pt-4">
+                        <button type='submit'>save</button>
+                    </div> 
+                </form> 
+            </div> 
+        </div> 
+
+
+    {% endblock  %}
